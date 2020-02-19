@@ -2,7 +2,6 @@ package com.rudecrab.demo.controller;
 
 import com.rudecrab.demo.entity.User;
 import com.rudecrab.demo.service.UserService;
-import com.rudecrab.demo.vo.ResultVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,13 +28,13 @@ public class UserController {
 
     @ApiOperation("获得单个用户")
     @GetMapping("/getUser")
-    public ResultVO<User> getUser() {
+    public User getUser() {
         User user = new User();
         user.setId(1L);
         user.setAccount("12345678");
         user.setPassword("12345678");
         user.setEmail("123@qq.com");
-        return new ResultVO<>(user);
+        return user;
     }
 
 }
