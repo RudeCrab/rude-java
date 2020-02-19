@@ -99,6 +99,7 @@ public String addUser(User user) {
 }
 ```
 再来看一下接口的响应数据：
+
 ![](https://rudecrab-image-hosting.oss-cn-shenzhen.aliyuncs.com/blog/20200219170816.png)
 这样是不是方便很多？不难看出使用Validator校验有如下几个好处：
 
@@ -117,9 +118,11 @@ public String addUser(@RequestBody @Valid User user) {
 ```
 去掉之后会发生什么事情呢？直接来试验一下，还是按照之前一样故意传递一个不符合校验规则的参数给接口。
 此时我们观察控制台可以发现接口已经引发`MethodArgumentNotValidException`异常了：
+
 ![](https://rudecrab-image-hosting.oss-cn-shenzhen.aliyuncs.com/blog/20200219161245.png)
 其实这样就已经达到我们想要的效果了，参数校验不通过自然就不执行接下来的业务逻辑，去掉BindingResult后会自动引发异常，异常发生了自然而然就不会执行业务逻辑。也就是说，我们完全没必要添加相关BindingResult相关操作嘛。不过事情还没有完，异常是引发了，可我们并没有编写返回错误信息的代码呀，那参数校验失败了会响应什么数据给前端呢？
 我们来看一下刚才异常发生后接口响应的数据：
+
 ![](https://rudecrab-image-hosting.oss-cn-shenzhen.aliyuncs.com/blog/20200219172242.png)
 没错，是直接将整个错误对象相关信息都响应给前端了！这样就很难受，不过解决这个问题也很简单，就是我们接下来要讲的全局异常处理！
 
@@ -144,6 +147,7 @@ public class ExceptionControllerAdvice {
 }
 ```
 我们再来看下这次校验失败后的响应数据：
+
 ![](https://rudecrab-image-hosting.oss-cn-shenzhen.aliyuncs.com/blog/20200219170816.png)
 没错，这次返回的就是我们制定的错误提示信息！我们通过全局异常处理优雅的实现了我们想要的功能！以后我们再想写接口参数校验，就只需要在入参的成员变量上加上Validator校验规则注解，然后在参数上加上`@Valid`注解即可完成校验，校验失败会自动返回错误提示信息，无需任何其他代码！
 
@@ -239,6 +243,7 @@ public ResultVO<String> MethodArgumentNotValidExceptionHandler(MethodArgumentNot
 }
 ```
 我们再来看一下此时如果发生异常了会响应什么数据给前端：
+
 ![](https://rudecrab-image-hosting.oss-cn-shenzhen.aliyuncs.com/blog/20200219204452.png)
 OK，这个异常信息响应就非常好了，状态码和响应说明还有错误提示数据都返给了前端，并且是所有异常都会返回相同的格式！异常这里搞定了，别忘了我们到接口那也要修改返回类型，我们新增一个接口好来看看效果：
 
@@ -255,6 +260,8 @@ public ResultVO<User> getUser() {
 }
 ```
 看一下如果响应正确返回的是什么效果：
+
+
 
 ![](https://rudecrab-image-hosting.oss-cn-shenzhen.aliyuncs.com/blog/20200219205620.png)
 
@@ -373,6 +380,8 @@ public User getUser() {
 ```
 
 然后我们来看下响应数据：
+
+
 
 ![](https://rudecrab-image-hosting.oss-cn-shenzhen.aliyuncs.com/blog/20200219205620.png)
 
