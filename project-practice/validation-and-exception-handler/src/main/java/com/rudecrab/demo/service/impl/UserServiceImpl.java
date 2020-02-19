@@ -15,21 +15,7 @@ import java.util.regex.Pattern;
 public class UserServiceImpl implements UserService {
     @Override
     public String addUser(User user) {
-        if (user == null || user.getId() == null || user.getAccount() == null || user.getPassword() == null || user.getEmail() == null) {
-            return "对象或者对象字段不能为空";
-        }
-        if (StringUtils.isEmpty(user.getAccount()) || StringUtils.isEmpty(user.getPassword()) || StringUtils.isEmpty(user.getEmail())) {
-            return "不能输入空字符串";
-        }
-        if (user.getAccount().length() < 6 || user.getAccount().length() > 11) {
-            return "账号长度必须是6-11个字符";
-        }
-        if (user.getPassword().length() < 6 || user.getPassword().length() > 16) {
-            return "账号长度必须是6-16个字符";
-        }
-        if (!Pattern.matches("^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)+$", user.getEmail())) {
-            return "邮箱格式不正确";
-        }
+        // 直接编写业务逻辑
         return "success";
     }
 }
