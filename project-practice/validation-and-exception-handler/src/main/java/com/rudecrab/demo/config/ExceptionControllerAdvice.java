@@ -1,5 +1,6 @@
 package com.rudecrab.demo.config;
 
+import com.rudecrab.demo.enums.ResultCode;
 import com.rudecrab.demo.exception.APIException;
 import com.rudecrab.demo.vo.ResultVO;
 import org.springframework.validation.ObjectError;
@@ -16,7 +17,7 @@ public class ExceptionControllerAdvice {
 
     @ExceptionHandler(APIException.class)
     public ResultVO<String> APIExceptionHandler(APIException e) {
-        return new ResultVO<>(e.getCode(), "响应失败", e.getMsg());
+        return new ResultVO<>(ResultCode.FAILED, e.getMsg());
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
@@ -24,7 +25,7 @@ public class ExceptionControllerAdvice {
         // 从异常对象中拿到ObjectError对象
         ObjectError objectError = e.getBindingResult().getAllErrors().get(0);
         // 然后提取错误提示信息进行返回
-        return new ResultVO<>(1001, "参数校验失败", objectError.getDefaultMessage());
+        return new ResultVO<>(ResultCode.VALIDATE_FAILED, objectError.getDefaultMessage());
     }
 
 }

@@ -1,5 +1,6 @@
 package com.rudecrab.demo.vo;
 
+import com.rudecrab.demo.enums.ResultCode;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
@@ -19,12 +20,12 @@ public class ResultVO<T> {
     private T data;
 
     public ResultVO(T data) {
-        this(1000, "success", data);
+        this(ResultCode.SUCCESS, data);
     }
 
-    public ResultVO(int code, String msg, T data) {
-        this.code = code;
-        this.msg = msg;
+    public ResultVO(ResultCode resultCode, T data) {
+        this.code = resultCode.getCode();
+        this.msg = resultCode.getMsg();
         this.data = data;
     }
 }
