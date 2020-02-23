@@ -410,4 +410,4 @@ public User getUser() {
 
 再次强调，项目体系该怎么构建、后端接口该怎么写都没有一个绝对统一的标准，不是说一定要按照本文的来才是最好的，你怎样都可以，本文每一个环节你都可以按照自己的想法来进行编码，我只是提供了一个思路！
 
-最后在这里放上此项目的[github地址](https://github.com/RudeCrab/rude-java/tree/master/project-practice/validation-and-exception-handler)，clone到本地即可直接运行，并且我将每一次的优化记录都分别做了代码提交，你可以清晰的看到项目的改进过程，如果对你有帮助请在github上点个star，我还会继续更新很多【项目实践】哦！
+最后在这里放上此项目的[github地址](https://github.com/RudeCrab/rude-java/tree/master/project-practice/validation-and-exception-handler)，clone到本地即可直接运行，并且我将每一次的优化记录都分别做了代码提交，你可以清晰的看到项目的改进过程，如果对你有帮助请在github上点个star，我还会继续更新更多【项目实践】哦！
