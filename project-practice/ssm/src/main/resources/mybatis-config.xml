@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+        <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+                "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<!--配置全局设置-->
+<settings>
+    <!--启用日志，并指定日志实现方式-->
+    <setting name="logImpl" value="SLF4J"/>
+
+    <!--启用主键生成策略-->
+    <setting name="useGeneratedKeys" value="true"/>
+
+    <!--配置启用下划线转驼峰的映射-->
+    <setting name="mapUnderscoreToCamelCase" value="true"/>
+
+    <!--启用二级缓存-->
+    <setting name="cacheEnabled" value="true"/>
+</settings>
+</configuration>

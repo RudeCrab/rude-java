@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       https://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <!--属性文件的读取，这里读取刚才我们的数据库连接相关配置-->
+    <context:property-placeholder location="classpath:database.properties" file-encoding="UTF-8"/>
+
+    <!--配置自动扫描，如果不配置这个那么就无法使用@Autowired加载bean-->
+    <context:component-scan base-package="com.rudecrab.ssm"/>
+
+    <!--配置数据源-->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <!--配置JDBC基础属性，即数据库连接相关配置-->
+        <property name="driverClassName" value="${jdbc.driver}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+
+        <!--配置连接池的设置,这个是要根据真实项目情况来配置的，随着项目的发展会不断修改-->
+        <property name="initialSize" value="10"/>
+        <property name="maxActive" value="100"/>
+    </bean>
+
+    <!--
+    重点来了，这里配置是MyBatis的SqlSessionFactory，就是这一块配置将Spring和Mybatis整合到了一起
+    如果不配置这里，你的mapper接口只能通过SqlSession来获取，十分麻烦。这里配置好后就可以通过Spring IoC来获取mapper接口了
+    -->
+    <bean class="org.mybatis.spring.SqlSessionFactoryBean" id="sqlSessionFactory">
+        <!--指定数据源-->
+        <property name="dataSource" ref="dataSource"/>
+        <!--加载mybatis全局设置，classpath即我们的资源路径resources-->
+        <property name="configLocation" value="classpath:mybatis-config.xml"/>
+        <!--配置Mybatis的映射xml文件路径-->
+        <property name="mapperLocations" value="classpath:mapper/*.xml"/>
+    </bean>
+
+    <!--指定Mybatis的mapper接口扫描包-->
+    <!--注意！！！如果用的是tk.mybatis自动生成的mapper接口，一定要将org.mybatis.改成tk.mybatis-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!--指定刚才我们配置好的sqlSessionFactory-->
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+        <!--指定mapper接口扫描包-->
+        <property name="basePackage" value="com.rudecrab.ssm.mapper"/>
+    </bean>
+
+    <!--配置事务管理器，如果不配置这个，不启动事务扫描的话，那么发生了异常也不会触发回滚-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <!--还得指定数据源-->
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <!--启动事务的扫描-->
+    <tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true"/>
+</beans>

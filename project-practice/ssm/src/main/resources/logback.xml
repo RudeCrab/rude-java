@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <!--定义日志文件输出地址-->
+    <property name="LOG_ERROR_HOME" value="error"/>
+    <property name="LOG_INFO_HOME" value="info"/>
+
+    <!--通过appender标签指定日志的收集策略，我们会定义三个收集策略：控制台输出、普通信息文件输出、错误信息文件输出-->
+    <!--name属性指定appender命名-->
+    <!--class属性指定输出策略，通常有两种，控制台输出和文件输出，文件输出就是将日志进行一个持久化-->
+
+    <!--控制台输出-->
+    <appender name="CONSOLE_LOG" class="ch.qos.logback.core.ConsoleAppender">
+        <!--使用该标签下的标签指定日志输出格式-->
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <!--
+            %p:输出优先级，即DEBUG,INFO,WARN,ERROR,FATAL
+            %r:输出自应用启动到输出该日志讯息所耗费的毫秒数
+            %t:输出产生该日志事件的线程名
+            %f:输出日志讯息所属的类别的类别名
+            %c:输出日志讯息所属的类的全名
+            %d:输出日志时间点的日期或时间，指定格式的方式： %d{yyyy-MM-dd HH:mm:ss}
+            %l:输出日志事件的发生位置，即输出日志讯息的语句在他所在类别的第几行。
+            %m:输出代码中指定的讯息，如log(message)中的message
+            %n:输出一个换行符号
+            -->
+            <pattern>%red(%d{yyyy-MM-dd HH:mm:ss.SSS}) %yellow([%-5p]) %highlight([%t]) %boldMagenta([%C]) %green([%L]) %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <!--普通信息文件输出-->
+    <appender name="INFO_LOG" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!--通过使用该标签指定过滤策略-->
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <!--标签指定过滤的类型-->
+            <level>ERROR</level>
+            <onMatch>DENY</onMatch>
+            <onMismatch>ACCEPT</onMismatch>
+        </filter>
+
+        <encoder>
+            <!--标签指定日志输出格式-->
+            <pattern>[%d{yyyy-MM-dd' 'HH:mm:ss.SSS}] [%C] [%t] [%L] [%-5p] %m%n</pattern>
+        </encoder>
+
+        <!--标签指定收集策略，比如基于时间进行收集-->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!--标签指定生成日志保存地址，通过这样配置已经实现了分类分天收集日志的目标了-->
+            <fileNamePattern>${LOG_INFO_HOME}//%d.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+    </appender>
+
+    <!--错误信息文件输出-->
+    <appender name="ERROR_LOG" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+        <encoder>
+            <pattern>[%d{yyyy-MM-dd' 'HH:mm:ss.SSS}] [%C] [%t] [%L] [%-5p] %m%n</pattern>
+        </encoder>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_ERROR_HOME}//%d.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+    </appender>
+
+    <!--用来设置某一个包或具体的某一个类的日志打印级别-->
+    <logger name="com.rudecrab.ssm.mapper" level="DEBUG"/>
+
+    <!--必填标签，用来指定最基础的日志输出级别-->
+    <root level="info">
+        <!--添加append-->
+        <appender-ref ref="CONSOLE_LOG"/>
+        <appender-ref ref="INFO_LOG"/>
+        <appender-ref ref="ERROR_LOG"/>
+    </root>
+</configuration>
