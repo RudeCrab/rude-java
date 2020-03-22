@@ -1,5 +1,6 @@
 package com.rudecrab.ssm.service;
 
+import com.rudecrab.ssm.entity.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,5 +17,13 @@ public class UserServiceTest {
     public void getAll() {
         System.out.println(userService.getAll());
         System.out.println(userService.getAll());
+    }
+
+    @Test
+    public void addOne() {
+        User user = new User();
+        user.setName("user");
+        user.setPassword("123456");
+        System.out.println(userService.addOne(user));
     }
 }

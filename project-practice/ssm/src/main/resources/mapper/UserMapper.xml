@@ -4,6 +4,11 @@
     <!--开启缓存-->
     <cache/>
 
+    <!--新增一条User数据到数据库中-->
+    <insert id="insert">
+        insert into user(name, password) value(#{name}, #{password})
+    </insert>
+
     <!--从数据库中查询出所有的User对象-->
     <select id="selectAll" resultType="com.rudecrab.ssm.entity.User">
         select * from user

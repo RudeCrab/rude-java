@@ -12,7 +12,10 @@
     <context:property-placeholder location="classpath:database.properties" file-encoding="UTF-8"/>
 
     <!--配置自动扫描，如果不配置这个那么就无法使用@Autowired加载bean-->
-    <context:component-scan base-package="com.rudecrab.ssm"/>
+    <context:component-scan base-package="com.rudecrab.ssm" use-default-filters="true">
+        <!--这里要排除掉Controller的注解，Controller专门交给MVC去扫描，这样会就不会冲突-->
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
 
     <!--配置数据源-->
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
@@ -55,5 +58,5 @@
         <property name="dataSource" ref="dataSource"/>
     </bean>
     <!--启动事务的扫描-->
-    <tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true"/>
+    <tx:annotation-driven/>
 </beans>

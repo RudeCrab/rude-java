@@ -21,7 +21,7 @@
     <!--统一配置jar包的版本-->
     <mysql.version>5.1.48</mysql.version>
     <spring.version>5.2.0.RELEASE</spring.version>
-    <jackson.version>2.9.1</jackson.version>
+    <jackson.version>2.10.0</jackson.version>
   </properties>
 
   <dependencies>
@@ -90,10 +90,10 @@
 
     <!-- jackson依赖包,用来将java对象转换JSON格式，SpringMVC要用的 -->
     <dependency>
-      <groupId>com.fasterxml.jackson.core</groupId>
-      <artifactId>jackson-core</artifactId>
-      <version>${jackson.version}</version>
-    </dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-core</artifactId>
+    <version>${jackson.version}</version>
+  </dependency>
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>

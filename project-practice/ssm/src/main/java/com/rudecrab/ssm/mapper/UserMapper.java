@@ -16,4 +16,11 @@ public interface UserMapper {
      * @return User对象集合
      */
     List<User> selectAll();
+
+    /**
+     * 新增一条User数据到数据库中
+     * @param user User对象
+     * @return 数据库中受影响的行数
+     */
+    int insert(User user);
 }

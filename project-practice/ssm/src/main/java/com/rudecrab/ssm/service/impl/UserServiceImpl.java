@@ -23,4 +23,9 @@ public class UserServiceImpl implements UserService {
     public List<User> getAll() {
         return userMapper.selectAll();
     }
+
+    @Override
+    public int addOne(User user) {
+        return userMapper.insert(user);
+    }
 }
