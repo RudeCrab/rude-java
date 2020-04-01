@@ -19,6 +19,11 @@
 
 
 
-## 目录结构
+## 项目实践系列
 
-[SSM整合](./project-practice/ssm/ssm.md)
+[【项目实践】SpringBoot三招组合拳，手把手教你打出优雅的后端接口](./project-practice/validation-and-exception-handler/validation-and-exception-handler.md)
+
+[【项目实践】有了SpringBoot还有必要学SSM整合吗](./project-practice/ssm/ssm.md)
+
+[【项目实践】使用Vue.js和ElementUI快速实现后台管理系统的界面布局](./project-practice/vue-route-demo/vue-route-demo.md)
+
