@@ -21,7 +21,7 @@ public class ResponseControllerAdvice implements ResponseBodyAdvice<Object> {
     @Override
     public boolean supports(MethodParameter returnType, Class<? extends HttpMessageConverter<?>> aClass) {
         // 如果接口返回的类型本身就是ResultVO那就没有必要进行额外的操作，返回false
-        return !returnType.getGenericParameterType().equals(ResultVO.class);
+        return !returnType.getParameterType().equals(ResultVO.class);
     }
 
     @Override
