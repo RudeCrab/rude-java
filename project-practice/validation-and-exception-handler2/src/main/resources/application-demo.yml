@@ -1,0 +1,5 @@
+spring:
+  profiles: demo
+
+swagger:
+  enable: true
