@@ -23,7 +23,7 @@
 
 [【项目实践】SpringBoot三招组合拳，手把手教你打出优雅的后端接口](./project-practice/validation-and-exception-handler/validation-and-exception-handler.md)
 
-[【项目实践】后端接口统一规范的同时，如何优雅得扩展规范](./project-practice/validation-and-exception-handler/validation-and-exception-handler2.md)
+[【项目实践】后端接口统一规范的同时，如何优雅得扩展规范](./project-practice/validation-and-exception-handler2/validation-and-exception-handler2.md)
 
 [【项目实践】有了SpringBoot还有必要学SSM整合吗](./project-practice/ssm/ssm.md)
 
