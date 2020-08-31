@@ -17,15 +17,15 @@
 
 > 以项目驱动学习，以实践检验真知
 
-
-
 ## 项目实践系列
 
-[【项目实践】SpringBoot三招组合拳，手把手教你打出优雅的后端接口](./project-practice/validation-and-exception-handler/validation-and-exception-handler.md)
+[【项目实践】SpringBoot三招组合拳，手把手教你打出优雅的后端接口](https://github.com/RudeCrab/rude-java/blob/master/project-practice/validation-and-exception-handler)
 
-[【项目实践】后端接口统一规范的同时，如何优雅得扩展规范](./project-practice/validation-and-exception-handler2/validation-and-exception-handler2.md)
+[【项目实践】后端接口统一规范的同时，如何优雅得扩展规范](https://github.com/RudeCrab/rude-java/blob/master/project-practice/validation-and-exception-handler2)
 
-[【项目实践】有了SpringBoot还有必要学SSM整合吗](./project-practice/ssm/ssm.md)
+[【项目实践】学习SpringBoot之前先学学SSM整合](https://github.com/RudeCrab/rude-java/blob/master/project-practice/ssm)
 
-[【项目实践】使用Vue.js和ElementUI快速实现后台管理系统的界面布局](./project-practice/vue-route-demo/vue-route-demo.md)
+[【项目实践】在用安全框架前，我想先让你手撸一个登陆认证](https://github.com/RudeCrab/rude-java/tree/master/project-practice/login-demo)
+
+[【项目实践】使用Vue.js和ElementUI快速实现后台管理系统的界面布局](https://github.com/RudeCrab/rude-java/blob/master/project-practice/vue-route-demo)
 
