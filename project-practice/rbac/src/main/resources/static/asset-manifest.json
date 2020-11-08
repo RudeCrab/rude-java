@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "./static/css/main.e491c8eb.chunk.css",
+    "main.js": "./static/js/main.d5d43d44.chunk.js",
+    "main.js.map": "./static/js/main.d5d43d44.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.11b2d578.js",
+    "runtime-main.js.map": "./static/js/runtime-main.11b2d578.js.map",
+    "static/css/2.c0088679.chunk.css": "./static/css/2.c0088679.chunk.css",
+    "static/js/2.c3d8f878.chunk.js": "./static/js/2.c3d8f878.chunk.js",
+    "static/js/2.c3d8f878.chunk.js.map": "./static/js/2.c3d8f878.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.a7f04232fd60a57aed89365d0deb87a2.js": "./precache-manifest.a7f04232fd60a57aed89365d0deb87a2.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/2.c0088679.chunk.css.map": "./static/css/2.c0088679.chunk.css.map",
+    "static/css/main.e491c8eb.chunk.css.map": "./static/css/main.e491c8eb.chunk.css.map",
+    "static/js/2.c3d8f878.chunk.js.LICENSE.txt": "./static/js/2.c3d8f878.chunk.js.LICENSE.txt",
+    "static/media/RudeCrab.png": "./static/media/RudeCrab.bc5edf9f.png",
+    "static/media/index.less": "./static/media/bg.9666e858.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.11b2d578.js",
+    "static/css/2.c0088679.chunk.css",
+    "static/js/2.c3d8f878.chunk.js",
+    "static/css/main.e491c8eb.chunk.css",
+    "static/js/main.d5d43d44.chunk.js"
+  ]
+}
