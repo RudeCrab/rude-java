@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.rudecrab.springsecurity.mapper.DataMapper">
+    <!--查询数据分页信息-->
+    <select id="selectPage" resultType="com.rudecrab.springsecurity.model.vo.DataPageVO">
+        select
+            *
+        from
+            `data`
+        ${ew.customSqlSegment}
+    </select>
+</mapper>
