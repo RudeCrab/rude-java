@@ -37,9 +37,9 @@
 
 请用微信扫码：
 
-![微信二维码](https://rudecrab-image-hosting.oss-cn-shenzhen.aliyuncs.com/wx/1.png)
+![微信二维码](http://ww1.sinaimg.cn/large/dcdff92dgy1glnlszxvplj20p00dw76g.jpg)
 
-> 博客、Github、微信公众号都是：RudeCrab，欢迎关注！如果对你有帮助可以收藏、点赞、star、在看、分享~~ 你的支持，就是我写文的最大动力
+> 博客、Github、微信公众号都是：**RudeCrab**，欢迎关注！如果对你有帮助可以收藏、点赞、star、在看、分享~~ 你的支持，就是我写文的最大动力
 >
 > 微信上转载请联系公众号开启白名单，其他地方转载请标明原地址、原作者！
 
