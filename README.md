@@ -18,17 +18,19 @@
 
 ## 项目实践系列
 
-[【项目实践】一文带你搞定前后端分离下的认证和授权|Spring Security + JWT](https://github.com/RudeCrab/rude-java/tree/master/project-practice/springsecurity)
-
-[【项目实践】一文带你搞定页面权限、按钮权限以及数据权限](https://github.com/RudeCrab/rude-java/tree/master/project-practice/rbac)
+[【项目实践】学习SpringBoot之前先学学SSM整合](https://github.com/RudeCrab/rude-java/blob/master/project-practice/ssm)
 
 [【项目实践】SpringBoot三招组合拳，手把手教你打出优雅的后端接口](https://github.com/RudeCrab/rude-java/blob/master/project-practice/validation-and-exception-handler)
 
 [【项目实践】后端接口统一规范的同时，如何优雅得扩展规范](https://github.com/RudeCrab/rude-java/blob/master/project-practice/validation-and-exception-handler2)
 
-[【项目实践】学习SpringBoot之前先学学SSM整合](https://github.com/RudeCrab/rude-java/blob/master/project-practice/ssm)
-
 [【项目实践】在用安全框架前，我想先让你手撸一个登陆认证](https://github.com/RudeCrab/rude-java/tree/master/project-practice/login-demo)
+
+[【项目实践】一文带你搞定页面权限、按钮权限以及数据权限](https://github.com/RudeCrab/rude-java/tree/master/project-practice/rbac)
+
+[【项目实践】一文带你搞定前后端分离下的认证和授权|Spring Security + JWT](https://github.com/RudeCrab/rude-java/tree/master/project-practice/springsecurity)
+
+[【项目实践】依赖注入用得好，设计模式轻松搞](https://github.com/RudeCrab/rude-java/tree/master/project-practice/di)
 
 [【项目实践】使用Vue.js和ElementUI快速实现后台管理系统的界面布局](https://github.com/RudeCrab/rude-java/blob/master/project-practice/vue-route-demo)
 
@@ -38,7 +40,5 @@
 
 ![微信二维码](http://ww1.sinaimg.cn/large/dcdff92dgy1glnmky7fb7j20p00dwdig.jpg)
 
-> 博客、Github、微信公众号都是：**RudeCrab**，欢迎关注！如果对你有帮助可以收藏、点赞、star、在看、分享~~ 你的支持，就是我写文的最大动力
->
-> 微信上转载请联系公众号开启白名单，其他地方转载请标明原地址、原作者！
+> 微信上转载请联系公众号【RudeCrab】开启白名单，其他地方转载请标明原地址、原作者！
 

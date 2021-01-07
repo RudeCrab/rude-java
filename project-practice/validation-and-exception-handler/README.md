@@ -7,3 +7,5 @@
 ## 项目讲解
 
 https://juejin.im/post/6844904101940117511
+
+![微信二维码](http://ww1.sinaimg.cn/large/dcdff92dgy1glnmky7fb7j20p00dwdig.jpg)
