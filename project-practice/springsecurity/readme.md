@@ -1,4 +1,4 @@
-# 【项目实践】一文带你搞定前后端分离下的认证和授权|Spring Security + JWT
+# 【项目实践】一文带你搞定Spring Security
 
 ## 项目运行
 
@@ -16,6 +16,10 @@
 
 ## 文章讲解
 
-https://juejin.cn/post/6900721218207350791
+https://mp.weixin.qq.com/s/tdsHk9PrfSWXY_WSg0IZDQ
+
+我是「RudeCrab」，一只粗鲁的螃蟹，追求简单粗暴地讲解技术。
+
+关注「RudeCrab」微信公众号，和螃蟹一起横行霸道。
 
 ![微信二维码](http://ww1.sinaimg.cn/large/dcdff92dgy1glnmky7fb7j20p00dwdig.jpg)

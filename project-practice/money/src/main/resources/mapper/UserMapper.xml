@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.rudecrab.rudejava.money.mapper.UserMapper">
+    <update id="updateById">
+        update user set balance = #{balance} , other_balance = #{otherBalance} where id = #{id}
+    </update>
+
+    <select id="selectById" resultType="User">
+        select * from user where id = #{id}
+    </select>
+</mapper>

@@ -1,4 +1,4 @@
-# 【项目实践】在用安全框架前，我想先让你手撸一个登陆认证
+# 【项目实践】一文搞定 Session 和 JWT
 
 ## 项目运行
 
@@ -14,6 +14,10 @@ login-jwt：使用`JWT`完成登录认证功能
 
 ## 文章讲解
 
-https://juejin.im/post/6866978103776772109
+https://mp.weixin.qq.com/s/uDmrfVHg6sXyAMPqvWCRww
+
+我是「RudeCrab」，一只粗鲁的螃蟹，追求简单粗暴地讲解技术。
+
+关注「RudeCrab」微信公众号，和螃蟹一起横行霸道。
 
 ![微信二维码](http://ww1.sinaimg.cn/large/dcdff92dgy1glnmky7fb7j20p00dwdig.jpg)
