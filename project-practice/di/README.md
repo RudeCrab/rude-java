@@ -8,6 +8,6 @@
 
 ## 文章讲解
 
-https://juejin.cn/post/6914815944644624391
+https://mp.weixin.qq.com/s/1P8NZLO19HfwI340tMIx0w
 
 ![微信二维码](http://ww1.sinaimg.cn/large/dcdff92dgy1glnmky7fb7j20p00dwdig.jpg)

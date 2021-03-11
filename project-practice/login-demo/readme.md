@@ -14,7 +14,7 @@ login-jwt：使用`JWT`完成登录认证功能
 
 ## 文章讲解
 
-https://mp.weixin.qq.com/s/uDmrfVHg6sXyAMPqvWCRww
+https://mp.weixin.qq.com/s/EZEh_d4DtKme-xBuKEpK8w
 
 我是「RudeCrab」，一只粗鲁的螃蟹，追求简单粗暴地讲解技术。
 

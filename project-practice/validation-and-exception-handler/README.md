@@ -6,7 +6,7 @@
 
 ## 项目讲解
 
-https://mp.weixin.qq.com/s/ipFW88zeRRQZE1BydJE9gw
+https://mp.weixin.qq.com/s/NG1hVw_2r7XCiw-CBXuCAQ
 
 我是「RudeCrab」，一只粗鲁的螃蟹，追求简单粗暴地讲解技术。
 

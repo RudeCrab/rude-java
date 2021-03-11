@@ -34,6 +34,8 @@
 
 [【项目实践】商业计算怎样才能保证精度不丢失](https://github.com/RudeCrab/rude-java/blob/master/project-practice/money)
 
+[【项目实践】使用 MinIO 自建高性能对象存储服务器](https://github.com/RudeCrab/rude-java/blob/master/project-practice/minio)
+
 [【项目实践】使用Vue.js和ElementUI快速实现后台管理系统的界面布局](https://github.com/RudeCrab/rude-java/blob/master/project-practice/vue-route-demo)
 
 ## 联系方式

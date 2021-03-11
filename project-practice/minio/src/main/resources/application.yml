@@ -1,0 +1,5 @@
+minio:
+  url: http://rudecrab.com:9000 # 服务器地址
+  access: minioadmin # 账号
+  secret: minioadmin # 密码
+  bucket: file # Bucket
