@@ -1,0 +1,55 @@
+// 左侧菜单折叠按钮
+.trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 16px;
+  cursor: pointer;
+  transition: color 0.3s;
+  :hover {
+    color: #1890ff;
+  }
+}
+
+.site-layout .site-layout-background {
+  background: #fff;
+}
+
+// 顶部导航栏右边菜单栏
+.box2 {
+  float: right;
+  padding-right: 30px;
+}
+
+// 左侧菜单栏样式
+.sidebar {
+  overflow: hidden;
+  .logo {
+    padding: 8px 0 0 24px;
+    width: 200px;
+    height: 48px;
+
+    &-icon {
+      display: inline-block;
+      margin-right: 4px;
+      font-size: 32px;
+      color: white;
+    }
+
+    &-title {
+      position: relative;
+      top: -4px;
+      left: 18px;
+      font-size: 22px;
+      color: white;
+    }
+  }
+
+  .ant-menu {
+    .ant-menu-item:after {
+      border-right: none;
+    }
+  }
+  .ant-menu-inline {
+    border-right: none;
+  }
+}
