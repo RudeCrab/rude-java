@@ -1,4 +1,36 @@
-/project-practice/login-demo/.idea
-/project-practice/login-demo/*.iml
-/project-practice/rbac/*.iml
+# Folder config file
+Desktop.ini
+
+# java class file
+*.class
+
+# Package Files #
+*.war
+*.ear
+/target
+/.settings
+/.classpath
+/.project
+/.idea
+
+# ignore Maven generated target folders
+target
+out
+
+# ignore eclipse files
+.project
+.classpath
+.settings
+.factorypath
+.metadata
+.idea
+*.iml
+
+# ignore log files
 *.log
+
+# front-end
+/build
+/node_modules
+/.idea
+/yarn-error.log
